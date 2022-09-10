@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
-class Home extends React.Component {
+class HomeCC extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,6 +16,11 @@ class Home extends React.Component {
 
   shouldComponentUpdate(nextProps, nextState) {
     console.log('shouldComponentUpdate', nextProps, nextState);
+    // if (nextState.counter === 1) {
+    //   return true;
+    // } else {
+    //   return false;
+    // }
     return true;
   }
 
@@ -37,7 +42,7 @@ class Home extends React.Component {
     console.log('render');
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Hello, This is HOME!</Text>
+        <Text style={styles.title}>This is HOME Class Component</Text>
         <Text style={styles.title}>{`Count is ${this.state.counter}`}</Text>
 
         <TouchableOpacity
@@ -66,4 +71,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home;
+export default HomeCC;
